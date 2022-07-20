@@ -13,8 +13,8 @@ AddEventHandler('QBCore:Client:OnJobUpdate', function(job)
 end)
 
 -- spawn veiculo
-RegisterNetEvent('ambulancegarage:spawn')
-AddEventHandler('ambulancegarage:spawn', function(pd)
+RegisterNetEvent('linksanco-ambulancegarage:spawn')
+AddEventHandler('linksanco-ambulancegarage:spawn', function(pd)
     local vehicle = pd.vehicle
     local coords = GetEntityCoords(PlayerPedId())
     QBCore.Functions.SpawnVehicle(vehicle, function(veh)
@@ -28,8 +28,8 @@ AddEventHandler('ambulancegarage:spawn', function(pd)
 end)
 
 -- guardar veiculo
-RegisterNetEvent('ambulancegarage:guardar')
-AddEventHandler('ambulancegarage:guardar', function()
+RegisterNetEvent('linksanco-ambulancegarage:guardar')
+AddEventHandler('linksanco-ambulancegarage:guardar', function()
 
     QBCore.Functions.Notify('Veiculo guardado!')
     local car = GetVehiclePedIsIn(PlayerPedId(),true)
@@ -38,7 +38,7 @@ AddEventHandler('ambulancegarage:guardar', function()
 end)
 
 -- Menu da garagem 
-RegisterNetEvent('ambulancegarage:menu', function()
+RegisterNetEvent('linksanco-ambulancegarage:menu', function()
     exports['qb-menu']:openMenu({
         {
             id = 1,
@@ -50,7 +50,7 @@ RegisterNetEvent('ambulancegarage:menu', function()
             header = "Coil Raiden",
             txt = "",
             params = {
-                event = "ambulancegarage:spawn",
+                event = "linksanco-ambulancegarage:spawn",
                 args = {
                     vehicle = 'gdraidena',
                     
@@ -62,7 +62,7 @@ RegisterNetEvent('ambulancegarage:menu', function()
             header = "Benefactor XLS",
             txt = "",
             params = {
-                event = "ambulancegarage:spawn",
+                event = "linksanco-ambulancegarage:spawn",
                 args = {
                     vehicle = 'gdxlsa',
                     
@@ -74,7 +74,7 @@ RegisterNetEvent('ambulancegarage:menu', function()
             header = "Übermacht Rebla GTS",
             txt = "",
             params = {
-                event = "ambulancegarage:spawn",
+                event = "linksanco-ambulancegarage:spawn",
                 args = {
                     vehicle = 'gdreblaa',
                     
@@ -86,7 +86,7 @@ RegisterNetEvent('ambulancegarage:menu', function()
             header = "Vapid Speedo",
             txt = "",
             params = {
-                event = "ambulancegarage:spawn",
+                event = "linksanco-ambulancegarage:spawn",
                 args = {
                     vehicle = 'gdspeedoa',
                     
@@ -98,7 +98,7 @@ RegisterNetEvent('ambulancegarage:menu', function()
             header = "Store Vehicle",
             txt = "",
             params = {
-                event = "ambulancegarage:guardar",
+                event = "linksanco-ambulancegarage:guardar",
                 args = {
                     
                 }
@@ -117,7 +117,7 @@ Citizen.CreateThread(function ()
         options = {
             {
                 type = "Client",
-                event = "ambulancegarage:menu",
+                event = "linksanco-ambulancegarage:menu",
                 icon = "fas fa-car",
                 label = 'Open ambulanceGarage'
             },
