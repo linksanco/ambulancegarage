@@ -2,9 +2,9 @@ fx_version 'cerulean'
 
 game 'gta5'
 
-author 'scripts'
+author 'linksanco scripts'
 
-description 'ambulancegarage:spawn'
+description 'linksanco-ambulancegarage:spawn'
 
 version '0.1'
 
